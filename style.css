@@ -1,0 +1,795 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+:root {
+    --marine-blue: hsl(213, 96%, 18%);
+    --purplish-blue: hsl(243, 100%, 62%);
+    --pastel-blue: hsl(228, 100%, 84%);
+    --light-blue: hsl(206, 94%, 87%);
+    --strawberry-red: hsl(354, 84%, 57%);
+    --cool-gray: hsl(231, 11%, 63%);
+    --light-gray: hsl(229, 24%, 87%);
+    --magnolia: hsl(217, 100%, 97%);
+    --alabaster: hsl(231, 100%, 99%);
+    --white: hsl(0, 0%, 100%);
+}
+body{
+    font-family: 'Ubuntu', sans-serif !important;
+}
+form {
+    background-color: var(--magnolia);
+    width: 100%;
+    display: block;
+    position: relative;
+    padding: 100px 0px;
+}
+main {
+    /* height: 38rem; */
+    height: 600px;
+    width: 900px;
+    display: flex;
+    padding: 15px;
+    background-color: white;
+    border-radius: 8px;
+    margin: 0px auto;
+    box-shadow: 0px 1px 5px -2px rgba(0,0,0, 0.2);
+}
+/* Image Section Start */
+main .image_sec {
+    width: 30%;
+    position: relative;
+}
+main .image_sec.stepbg {
+    background-image: url("./assets/images/bg-sidebar-desktop.svg");
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: cover;
+    border-radius: 8px;
+    padding: 30px;
+}
+main .image_sec .step_selectors ul {
+    display: flex;
+    gap: 25px;
+    flex-direction: column;
+    list-style-type: none;
+}
+main .image_sec .step_selectors ul .first-step {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+main .image_sec .step_selectors ul .first-step .select.active {
+    color: black;
+    background-color: var(--pastel-blue);
+    border-color: var(--pastel-blue);
+}
+main .image_sec .step_selectors ul .first-step .step-description {
+    display: block;
+}
+main .image_sec .step_selectors ul .first-step .step-description .step-number {
+    color: var(--light-gray);
+    font-size: 12px;
+    line-height: 1.4;
+}
+main .image_sec .step_selectors ul .first-step .step-description .step-info {
+    color: white;
+    font-weight: 500;
+    font-size: 16px;
+}
+main .image_sec .step_selectors li {
+    list-style: none;
+    font-size: 16px;
+    border: 1px solid white;
+    border-radius: 50%;
+    padding: 8px;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    color: white;
+    font-weight: 700;
+}
+
+/* Image Section End */
+/* Main Content Section Start */
+
+.main-content {
+    width: 70%;
+}
+main .main-content .step-container .step1, main .main-content .step-container .step2, main .main-content .step-container .step3, main .main-content .step-container .step4, main .main-content .step-container .finish {
+    display: none;
+}
+main .main-content {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main .main-content .step-container {
+    width: 80%;
+    background-color: white;
+    position: static;
+    padding-top: 0px;
+}
+
+/* First Step Start */
+
+main .main-content .step-container .step1.active {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    /* display: block; */
+}
+main .main-content .step-container .step1.active header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+main .main-content .step-container .step1.active header .heading {
+    font-size: 35px;
+    color: var(--marine-blue);
+    font-weight: 700;
+}
+main .main-content .step-container .step1.active header .paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--cool-gray);
+}
+main .main-content .step-container .step1.active .step-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+main .main-content .step-container .step1.active .step-hero fieldset {
+    border: none;
+}
+main .main-content .step-container .step1.active .step-hero fieldset .label-error {
+    display: flex;
+    justify-content: space-between;
+}
+main .main-content .step-container .step1.active .step-hero fieldset .label-error label {
+    color: var(--marine-blue);
+    font-size: 16px;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
+main .main-content .step-container .step1.active .step-hero fieldset input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--light-gray);
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--marine-blue) !important;
+    cursor: pointer;
+}
+
+/*error section*/
+
+.error {
+    font-size: 14px;
+    font-weight: 500;
+    color: hsl(354, 84%, 57%);
+    text-transform: none;
+}
+main .main-content .step-container .step1.active .step-hero fieldset input:hover, main .main-content .step-container .step1.active .step-hero fieldset input:active, main .main-content .step-container .step1.active .step-hero fieldset input:focus {
+    border-color: var(--purplish-blue);
+}
+main .main-content .step-container .step1.active .step-hero fieldset input:focus-visible {
+    outline: 2px solid var(--purplish-blue);
+    border: none;
+}
+main .main-content .step-container .step1.active .step-hero fieldset ::-moz-placeholder {
+    padding-left: 0px;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+main .main-content .step-container .step1.active .step-hero fieldset ::placeholder {
+    padding-left: 0px;
+    font-size: 16px;
+    font-family: 'Ubuntu', sans-serif;
+}
+main .main-content .step-container .step1.active .controls {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    align-items: end;
+}
+main .main-content .step-container .step1.active .controls .next {
+    border-radius: 8px;
+    background-color: var(--marine-blue);
+    font-size: 16px;
+    padding: 15px 25px;
+    color: var(--white);
+    cursor: pointer;
+    margin: 50px 0px 0px;
+}
+
+/* First Step End */
+/* Second Step Start */
+
+main .main-content .step-container .step2.active {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+main .main-content .step-container .step2.active header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+main .main-content .step-container .step2.active header .heading {
+    font-size: 35px;
+    color: var(--marine-blue);
+    font-weight: 700;
+}
+main .main-content .step-container .step2.active header .paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--cool-gray);
+}
+main .main-content .step-container .step2.active .step-hero {
+    display: flex;
+    flex-direction: row;
+    gap: 25px;
+}
+main .main-content .step-container .step2.active .step-hero fieldset {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    border: none;
+    width: 33.33%;
+    gap: 25px;
+    padding: 16px;
+    border-radius: 8px;
+    position: relative;
+    /* min-height: 224px; */
+    cursor: pointer;
+}
+main .main-content .step-container .step2.active .step-hero fieldset img {
+    width: 45px;
+    height: 45px;
+    z-index: 999;
+}
+main .main-content .step-container .step2.active .step-hero fieldset .plan-details {
+    font-size: 16px;
+}
+.plan-name {
+    font-weight: 700;
+    color: var(--marine-blue);
+    margin-bottom: 5px;
+}
+input:checked + .plan-name, input:checked ~ .plan-duration, input:checked ~ .free-month {
+    position: relative;
+    z-index: 999;
+}
+.radios {
+    visibility: hidden;
+    cursor: pointer;
+}
+main .main-content .step-container .step2.active .step-hero fieldset .plan-details input[type=radio]::before {
+    content: "";
+    position: absolute;
+    background-color: transparent;
+    border-radius: 8px;
+    top: 0em;
+    bottom: 0em;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    border: 2px solid var(--light-gray);
+    visibility: visible;
+}
+main .main-content .step-container .step2.active .step-hero fieldset .plan-details input[type=radio]:hover::before {
+    border: 2px solid var(--purplish-blue);
+}
+main .main-content .step-container .step2.active .step-hero fieldset .plan-details input[type=radio]:checked::after {
+    content: "";
+    position: absolute;
+    background-color: var(--magnolia);
+    border-radius: 8px;
+    top: 0em;
+    bottom: 0em;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    border: 2px solid var(--purplish-blue);
+    visibility: visible;
+}
+main .main-content .step-container .step2.active .step-hero fieldset .plan-duration {
+    color: var(--cool-gray);
+    font-size: 15px;
+}
+main .main-content .step-container .step2.active .step-hero fieldset .free-month {
+    color: var(--marine-blue);
+    font-size: 14px;
+    font-weight: 400;
+    margin-top: 5px;
+}
+main .main-content .step-container .step2.active .periodity {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 8px;
+    border: none;
+    background-color: var(--magnolia);
+    border-radius: 8px;
+    margin-bottom: 55px;
+    color: var(--cool-gray);
+    font-weight: 700;
+}
+main .main-content .step-container .step2.active .periodity .active{
+    color: var(--marine-blue);
+}
+main .main-content .step-container .step2.active .periodity .toggle-switch {
+    height: 60px;
+}
+main .main-content .step-container .step2.active .periodity input[type=checkbox] {
+    height: 0;
+    width: 0;
+    visibility: hidden;
+}
+main .main-content .step-container .step2.active .periodity label {
+    cursor: pointer;
+    text-indent: -9999px;
+    width: 50px;
+    height: 20px;
+    background: var(--marine-blue);
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border-radius: 100px;
+    position: relative;
+    padding: 5px;
+}
+.circle {
+    background-color: #fff;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+}
+
+
+/* Second Step End */
+/* Third Step Start */
+
+main .main-content .step-container .step3.active {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+main .main-content .step-container .step3.active header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+main .main-content .step-container .step3.active header .heading {
+    font-size: 35px;
+    color: var(--marine-blue);
+    font-weight: 700;
+}
+main .main-content .step-container .step3.active header .paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--cool-gray);
+}
+main .main-content .step-container .step3.active .step-hero {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+main .main-content .step-container .step3.active .step-hero fieldset {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+    padding: 16px 20px;
+    border-radius: 8px;
+    border: 2px solid var(--light-gray);
+}
+main .main-content .step-container .step3.active .step-hero fieldset:hover {
+    border: 2px solid var(--purplish-blue);
+}
+main .main-content .step-container .step3.active .step-hero fieldset input[type='checkbox'] {
+    accent-color: var(--purplish-blue);
+    width: 20px;
+    height: 20px;
+    padding: 10px !important;
+    margin: 0;
+}
+main .main-content .step-container .step3.active .step-hero fieldset .service-details .service-name {
+    color: var(--marine-blue);
+    font-weight: 700;
+    font-size: 16px;
+}
+main .main-content .step-container .step3.active .step-hero fieldset .service-details .service-description {
+    color: var(--cool-gray);
+    font-size: 15px;
+    margin-top: 5px;
+}
+main .main-content .step-container .step3.active .step-hero fieldset .servicePrice {
+    position: absolute;
+    right: 20px;
+    color: var(--purplish-blue);
+}
+main .main-content .step-container .step3.active .controls {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 42px 0px 0px;
+}
+main .main-content .step-container .step3.active .controls .next {
+    border-radius: 8px;
+    background-color: var(--marine-blue);
+    font-size: 16px;
+    padding: 15px 25px;
+    color: var(--white);
+    cursor: pointer;
+}
+main .main-content .step-container .step3.active .controls .back {
+    border-radius: 8px;
+    color: var(--cool-gray);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Third Step End */
+/* Fourth Step Start */
+
+main .main-content .step-container .step4.active {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+}
+main .main-content .step-container .step4.active header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+main .main-content .step-container .step4.active header .heading {
+    font-size: 35px;
+    color: var(--marine-blue);
+    font-weight: 700;
+}
+main .main-content .step-container .step4.active header .paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--cool-gray);
+}
+main .main-content .step-container .step4.active .step-hero .checkout {
+    display: flex;
+    flex-direction: column;
+    background: var(--magnolia);
+    padding: 20px;
+    border-radius: 8px;
+}
+main .main-content .step-container .step4.active .step-hero .checkout .selectedPlan {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--marine-blue);
+    font-weight: 700;
+    font-size: 16px;
+}
+main .main-content .step-container .step4.active .step-hero .checkout .selectedPlan .selectedPlanName {
+    display: flex;
+    gap: 8px;
+    font-weight: 500;
+}
+main .main-content .step-container .step4.active .step-hero .checkout hr {
+    margin: 20px 0px;
+    border-top: 1px solid var(--cool-gray) !important;
+    border: none;
+}
+main .main-content .step-container .step4.active .step-hero .checkout .selectedServices {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice1, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice2, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice3 {
+    display: flex;
+    justify-content: space-between;
+}
+main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice1 .selectedServiceName1, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice1 .selectedServiceName2, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice1 .selectedServiceName3, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice2 .selectedServiceName1, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice2 .selectedServiceName2, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice2 .selectedServiceName3, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice3 .selectedServiceName1, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice3 .selectedServiceName2, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice3 .selectedServiceName3 {
+    color: var(--cool-gray);
+    font-size: 16px;
+}
+main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice1 .selectedServicePrice1, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice1 .selectedServicePrice2, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice1 .selectedServicePrice3, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice2 .selectedServicePrice1, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice2 .selectedServicePrice2, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice2 .selectedServicePrice3, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice3 .selectedServicePrice1, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice3 .selectedServicePrice2, main .main-content .step-container .step4.active .step-hero .checkout .selectedServices .selectedservice3 .selectedServicePrice3 {
+    color: var(--marine-blue);
+    font-size: 16px;
+    font-weight: 500;
+}
+main .main-content .step-container .step4.active .step-hero .total {
+    margin: 40px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.changePlanBtn {
+    border: none;
+    background: transparent;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--cool-gray);
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    margin-top: 5px;
+}
+.changePlanBtn:hover{
+    color: var(--purplish-blue);
+}
+main .main-content .step-container .step4.active .step-hero .total .selectedTotalName {
+    color: var(--cool-gray);
+    font-size: 16px;
+}
+main .main-content .step-container .step4.active .step-hero .total .selectedTotalPrice {
+    color: var(--purplish-blue);
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+}
+main .main-content .step-container .step4.active .controls {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 48px;
+}
+main .main-content .step-container .step4.active .controls .next {
+    border-radius: 8px;
+    background-color: var(--purplish-blue);
+    font-size: 16px;
+    padding: 15px 25px;
+    color: var(--white);
+    cursor: pointer;
+    border: none;
+}
+main .main-content .step-container .step4.active .controls .back {
+    border-radius: 8px;
+    color: var(--cool-gray);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/* Fourth Step End */
+/* Finish Step Start */
+
+main .main-content .step-container .finish.active {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+main .main-content .step-container .finish.active img {
+    width: 80px;
+}
+main .main-content .step-container .finish.active .heading {
+    font-size: 35px;
+    color: var(--marine-blue);
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+main .main-content .step-container .finish.active .paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--cool-gray);
+}
+main .main-content .step-container .step2 header, main .main-content .step-container .step3 header {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+main .main-content .step-container .step2 header .heading, main .main-content .step-container .step3 header .heading {
+    font-size: 35px;
+    color: var(--marine-blue);
+    font-weight: 700;
+}
+main .main-content .step-container .step2 header .paragraph, main .main-content .step-container .step3 header .paragraph {
+    font-size: 16px;
+    line-height: 24px;
+    color: var(--cool-gray);
+}
+main .main-content .step-container .step2 .controls, main .main-content .step-container .step3 .controls {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    bottom: -50px;
+}
+main .main-content .step-container .step2 .controls .next, main .main-content .step-container .step3 .controls .next {
+    border-radius: 8px;
+    background-color: var(--marine-blue);
+    font-size: 16px;
+    padding: 15px 25px;
+    color: var(--white);
+    cursor: pointer;
+}
+main .main-content .step-container .step2 .controls .back, main .main-content .step-container .step3 .controls .back {
+    border-radius: 8px;
+    color: var(--cool-gray);
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 500;
+}
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    font-weight: 500;
+    background: var(--magnolia);
+}
+.attribution a {
+    color: var(--purplish-blue);
+}
+/*******************************************
+********** Media Query for mobile **********
+*******************************************/
+@media only screen and (max-width: 767px)  {
+    form {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 0px;
+        background-color: unset;
+    }
+    main {
+        /* background-color: var(--magnolia); */
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding: 0px;
+        height: 840px;
+    }
+    main .image_sec {
+        width: 100%;
+        position: relative;
+    }
+    main .image_sec.stepbg {
+        background-image: url(./assets/images/bg-sidebar-mobile.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        border-radius: 0px;
+        padding: 0px;
+    }
+    main .image_sec .step_selectors {
+        padding-bottom: 77px;
+    }
+    main .image_sec .step_selectors ul {
+        display: flex;
+        gap: 12px;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 30px;
+    }
+    main .image_sec .step_selectors ul .step-description {
+        display: none !important;
+    }
+    main .main-content {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        /* background-color: var(--light-blue); */
+    }
+    main .main-content .step-container {
+        width: 100%;
+        background-color: var(--magnolia);
+        height: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+    }
+    main .main-content .step-container .step1.active, main .main-content .step-container .step2.active,  main .main-content .step-container .step3.active,  main .main-content .step-container .step4.active {
+        padding: 40px 20px;
+        position: absolute;
+        top: -73px;
+        border-radius: 8px;
+        box-shadow: 0px 1px 5px -2px rgba(0,0,0, 0.5);
+        width: 90%;
+        background-color: #fff;
+    }
+    main .main-content .step-container .step1.active .controls {
+        justify-content: center;
+        position: absolute;
+        bottom: -44.5%;
+        left: -1px;
+    }
+    main .main-content .step-container .step1.active .controls:before, main .main-content .step-container .step2.active .controls:before, main .main-content .step-container .step3.active .controls:before, main .main-content .step-container .step4.active .controls:before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        background: var(--alabaster);
+        position: absolute;
+        left: -5.2%;
+        padding: 20px 18.771px;
+        z-index: 0;
+        box-shadow: 0px -2px 5px -4px rgba(0,0,0, 0.2);
+    }
+    main .main-content .step-container .step1.active .controls .next, main .main-content .step-container .step2.active .controls .next, main .main-content .step-container .step2.active .controls .back, main .main-content .step-container .step3.active .controls .next, main .main-content .step-container .step3.active .controls .back, main .main-content .step-container .step4.active .controls .next, main .main-content .step-container .step4.active .controls .back {
+        margin: 0px;
+        z-index: 1;
+    }
+    main .main-content .step-container .step2.active .controls {
+        /* justify-content: center; */
+        position: absolute;
+        bottom: -97px;
+        left: -1px;
+    }
+    main .main-content .step-container .step2 .step-hero {
+        flex-direction: column !important;
+    }
+    main .main-content .step-container .step2 .step-hero fieldset {
+        flex-direction: row !important;
+        width: 100% !important;
+        justify-content: flex-start !important;
+        align-items: center;
+    }
+    .plan-details {
+        margin-top: -13px;
+    }
+    main .main-content .step-container .step2.active .periodity{
+        margin-bottom: 0px;
+    }
+    main .main-content .step-container .step3.active .step-hero {
+        gap: 16px;
+    }
+    main .main-content .step-container .step3.active .step-hero fieldset {
+        gap: 12px;
+        padding: 14px 14px;
+    }
+    .step3.active .step-hero fieldset input[type='checkbox'] {
+        width: 16px;
+        height: 16px;
+    }
+    main .main-content .step-container .step3.active .step-hero fieldset .service-details .service-name, main .main-content .step-container .step3.active .step-hero fieldset .servicePrice {
+        font-size: 14px;
+    }
+    main .main-content .step-container .step3.active .step-hero fieldset .service-details .service-description {
+        font-size: 12px;
+    }
+    main .main-content .step-container .step3.active .controls {
+        /* justify-content: center; */
+        position: absolute;
+        bottom: -57.36%;
+        left: -1px;
+        margin: 0px;
+    }
+    main .main-content .step-container .step4.active .step-hero .total {
+        margin-bottom: 0px;
+    }
+    main .main-content .step-container .step4.active .controls {
+        /* justify-content: center; */
+        position: absolute;
+        bottom: -51.9%;
+        left: -1px;
+        margin: 0px;
+    }
+    .attribution {
+        display: none;
+    }
+}
